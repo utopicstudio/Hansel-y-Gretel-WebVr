@@ -1,0 +1,552 @@
+<html>
+	<head>
+		<!-- SCRIPTS -->
+		<script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+		<script src="js/aframe-extras.min.js"></script>
+		<script src="js/aframe-text-geometry-component.min.js"></script>
+		<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+		<script src="https://rawgit.com/gmarty/aframe-ui-components/master/dist/aframe-ui-components.min.js"></script>
+		<script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+		<script src="js/blinkteleport.js"></script>
+		<!-- SUGGESTED FOR FLAT OBJECTS -->
+		<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
+		
+		<!-- 
+		<style>
+			a-scene {
+				height: 900px;
+				width: 50%;
+			}
+		</style>
+-->
+
+		<script type="text/javascript"> 
+
+        function boton1() {	
+
+        setTimeout(function() {
+	        console.log('clicked start')
+	        document.getElementById('Botoon1').setAttribute('visible', 'false')
+			
+	     }, 0);
+         }
+
+		 function boton2() {	
+
+setTimeout(function() {
+	console.log('clicked start')
+	document.getElementById('Botoon3').setAttribute('visible', 'false')
+	document.getElementById('Botoon4').setAttribute('visible', 'true')
+	
+ }, 0);
+ }
+ function boton3() {	
+
+setTimeout(function() {
+	console.log('clicked start')
+	
+	document.getElementById('Botoon4').setAttribute('visible', 'false')
+	
+ }, 0);
+ }
+
+ function boton4() {	
+
+setTimeout(function() {
+	console.log('clicked start')
+	
+	document.getElementById('Botoon7').setAttribute('visible', 'false')
+	document.getElementById('Botoon7').setAttribute('scale', '0 0 0')
+	document.getElementById('Botoon8').setAttribute('visible', 'true')
+	
+ }, 0);
+ }
+ function boton5() {	
+
+setTimeout(function() {
+	console.log('clicked start')
+	
+	
+	document.getElementById('Botoon8').setAttribute('visible', 'false')
+	
+ }, 0);
+ }
+ function boton6() {	
+
+setTimeout(function() {
+	console.log('clicked start')
+	
+	
+	document.getElementById('Botoon9').setAttribute('visible', 'false')
+	
+ }, 0);
+ }
+			
+			 function setCasa() {
+
+				setTimeout(function() {
+					console.log('clicked set casa')
+					document.getElementById('Exterior').setAttribute('visible', 'false')
+					document.getElementById('Interior').setAttribute('visible', 'true')
+					document.getElementById('waypoint1').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint2').setAttribute('scale', '1.5 1.5 1.5')
+					
+				}, 240);
+			}
+			
+			function setCasa2() {
+
+				setTimeout(function() {
+				console.log('clicked set casa2')
+				document.getElementById('waypoint2').setAttribute('scale', '0 0 0')
+				document.getElementById('waypoint3').setAttribute('scale', '1.5 1.5 1.5')
+				document.getElementById('Botoon2').setAttribute('visible', 'true')
+				}, 240);
+			}
+			function setBosque() {
+
+				setTimeout(function() {
+					console.log('clicked set bosque')
+					document.getElementById('Interior').setAttribute('visible', 'false')
+					document.getElementById('Bosque').setAttribute('visible', 'true')
+					document.getElementById('waypoint3').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint4').setAttribute('scale', '1.5 1.5 1.5')
+				}, 240);
+			}
+
+			function setBosque2() {
+
+				setTimeout(function() {
+					console.log('clicked set bosque2')
+					document.getElementById('waypoint4').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint5').setAttribute('scale', '1.5 1.5 1.5')
+					document.getElementById('Familia2').setAttribute('visible', 'false')
+					document.getElementById('Familia3').setAttribute('visible', 'true')
+					document.getElementById('Botoon5').setAttribute('visible', 'true')
+				}, 240);
+			}
+
+			function setExteriorBruja() {
+
+				setTimeout(function() {
+					console.log('clicked set exterior bruja')
+					document.getElementById('Bosque').setAttribute('visible', 'false')
+					document.getElementById('waypoint5').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint6').setAttribute('scale', '1.5 1.5 1.5')
+					document.getElementById('ExteriorBruja').setAttribute('visible', 'true')
+				}, 240);
+			}
+
+			function setInteriorBruja() {
+
+				setTimeout(function() {
+					console.log('clicked set interior bruja')
+					document.getElementById('waypoint6').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint7').setAttribute('scale', '1.5 1.5 1.5')
+					document.getElementById('ExteriorBruja').setAttribute('visible', 'false')
+					document.getElementById('InteriorBruja').setAttribute('visible', 'true')
+				}, 240);
+			}
+
+			function setInteriorBruja2() {
+
+				setTimeout(function() {
+					console.log('clicked set interior bruja 2')
+					document.getElementById('waypoint7').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint8').setAttribute('scale', '1.5 1.5 1.5')
+					document.getElementById('Familia6').setAttribute('visible', 'false')
+					document.getElementById('Familia7').setAttribute('visible', 'true')
+					document.getElementById('Botoon9').setAttribute('visible', 'true')
+				}, 240);
+			}
+
+			function setLago() {
+
+				setTimeout(function() {
+					console.log('clicked set interior bruja 2')
+					document.getElementById('waypoint8').setAttribute('scale', '0 0 0')
+					document.getElementById('waypoint9').setAttribute('scale', '1.5 1.5 1.5')
+					document.getElementById('Familia7').setAttribute('visible', 'false')
+					//document.getElementById('waypoint9').setAttribute('scale', '1 1 1')
+					document.getElementById('InteriorBruja').setAttribute('visible', 'false')
+					document.getElementById('Lago').setAttribute('visible', 'true')
+				}, 240);
+			}
+
+			function setFinal() {
+
+				setTimeout(function() {
+					console.log('clicked set Final')
+					document.getElementById('waypoint9').setAttribute('scale', '0 0 0')
+					document.getElementById('Lago').setAttribute('visible', 'false')
+					document.getElementById('Exterior').setAttribute('visible', 'true')
+					document.getElementById('Familia8').setAttribute('visible', 'true')					
+				}, 240);
+			}
+			
+			</script>
+	</head>
+	<!--<body>
+		<h2>Hansel y Gretel</h2>
+		<p>
+			Prueba Hansel y Gretel en WebVr
+		</p>
+		embedded
+	<body>-->
+		<a-scene>
+			<!-- ASSETS  -->
+			<a-assets>
+				<a-asset-item id="bake" src="models/Textbake.glb"></a-asset-item>
+				<a-asset-item id="head" src="models/head.glb"></a-asset-item>
+				<a-asset-item id="body" src="models/body.glb"></a-asset-item>
+				<a-asset-item id="arm" src="models/Arm.glb"></a-asset-item>				
+				<a-asset-item id="gretel" src="models/Gretel.glb"></a-asset-item>
+				<a-asset-item id="hansel" src="models/Hansel.glb"></a-asset-item>
+				<a-asset-item id="madra" src="models/Madrastra.glb"></a-asset-item>
+				<a-asset-item id="padre" src="models/Padre.glb"></a-asset-item>
+				<a-asset-item id="cisne" src="models/Cisne.glb"></a-asset-item>
+				<a-asset-item id="buho" src="models/Buho.glb"></a-asset-item>
+				<a-asset-item id="bruja" src="models/Bruja.glb"></a-asset-item>
+
+				<a-asset-item id="cofre" src="models/Chest.glb"></a-asset-item>
+				<a-asset-item id="waypointC" src="models/Waypoint.glb"></a-asset-item>
+
+				
+				<a-asset-item id="escena1" src="ScenesHG/Scene3_House.glb"></a-asset-item>
+				<a-asset-item id="escena2" src="ScenesHG/Scene2_HouseIterior.glb"></a-asset-item>
+				<a-asset-item id="escena3" src="ScenesHG/SceneForest.glb"></a-asset-item>
+				<a-asset-item id="escena4" src="ScenesHG/SceneCasaBruja.glb"></a-asset-item>
+				<a-asset-item id="escena5" src="ScenesHG/SceneCasaBrujaInterior.glb"></a-asset-item>
+				<a-asset-item id="escena6" src="ScenesHG/SceneLago.glb"></a-asset-item>
+
+				
+				<a-img id="fondo" src="images/window.png">
+				<a-img id="check" src="images/check.png">
+				<a-img id="arrow" src="images/arrow.png">
+
+					<a-img id="play" src="images/Ui2_Play_Ui3.png"></a-img>
+
+					<a-img id="Texto1" src="images/Texto1.png"></a-img>
+					<a-img id="Texto2" src="images/Texto2.png"></a-img>
+					<a-img id="Texto3" src="images/Texto3.png"></a-img>
+					<a-img id="Texto4" src="images/Texto4.png"></a-img>
+					<a-img id="Texto5" src="images/Texto5.png"></a-img>
+					<a-img id="Texto6" src="images/Texto6.png"></a-img>
+					<a-img id="Texto7" src="images/Texto7.png"></a-img>
+					<a-img id="Texto8" src="images/Texto8.png"></a-img>
+					<a-img id="Texto9" src="images/Texto9.png"></a-img>
+					<a-img id="Texto10" src="images/Texto10.png"></a-img>
+					<a-img id="Texto11" src="images/Texto11.png"></a-img>
+					<a-img id="Texto12" src="images/Texto12.png"></a-img>
+
+				<audio id="ambiente" src="audio/bosque.mp3" ></audio>
+			</a-assets>
+
+			<a-entity
+			id="waypoint1"
+			color="#00AA00"
+			position="4 0.5 4"
+			class="clickable"
+			scale="1.5 1.5 1.5"
+			blink-teleportation="pos: 3 0 4; hide: true; dur: 250"
+			onclick="setCasa()"
+			gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"
+			></a-entity>
+			<audio src="bosque.mp3" autoplay loop></audio>
+
+
+		
+			<!-- MODELOS -->
+
+			<a-entity id="Exterior" visible="true">
+				<a-entity gltf-model="#escena1" position="0 3 0" rotation="0 0 0" scale="1.5 1.5 1.5"></a-entity>
+				<a-plane id="Texto1" src="#Texto1" material="transparent: true" position="-0.5 1.5 11" rotation="0 25 0" scale="1 1 1" geometry=""></a-plane>
+			</a-entity>
+
+			<a-entity id="Interior" visible="false">
+				<a-entity gltf-model="#escena2" position="-2 0 2" rotation="0 180 0" scale="1 1 1"></a-entity>
+
+				<a-entity id="Botoon1" visible="true">
+					<a-plane id="Texto2" src="#Texto2" material="transparent: true" position="2.1 2 2" rotation="0 35 0" scale="2 2 2" geometry=""></a-plane>
+					<a-plane id="button" position="2.758 1.25 2.5" class="clickable" data-interactive="true" onclick="boton1()" rotation="0 35 0" scale="0.3 0.3 0.01" src="#play" material="transparent: true" geometry=""></a-plane>
+				</a-entity> 
+
+				<a-entity id="Botoon2" visible="false">
+					<a-plane id="Texto3" src="#Texto3" material="transparent: true" position="-2.0 2 0.8" rotation="0 115 0" scale="1 1 1" geometry=""></a-plane>
+					
+				</a-entity> 
+				
+			    
+				<a-entity id="Familia1" rotation="0 180 0" position="-2 0 2">
+					<a-entity gltf-model="#madra" shadow="receive: false" position="-5.07672 0 4.69279" rotation="0 -90 0" animation-mixer="clip: Discution"></a-entity>
+					<a-entity gltf-model="#gretel" shadow="receive: false" position="4.005 0 1.889" rotation="0 -90 0" animation-mixer="clip: Fear"></a-entity>
+					<a-entity gltf-model="#hansel" shadow="receive: false" position="4.005 0.06531 2.652" rotation="0 -90 0" animation-mixer="clip: Spy"></a-entity>
+					<a-entity gltf-model="#padre" shadow="receive: false" position="-6.51519 0 4.46399" rotation="0 90 0" animation-mixer="clip: Idle"></a-entity>
+					
+				</a-entity>
+				<a-entity
+					id="waypoint2"
+					
+					scale="0 0 0"
+					color="#00AA00"
+					position="-0.920 0.500 -0.185"
+					class="clickable"
+					blink-teleportation="pos: -0.920 0.500 -0.185; hide: true; dur: 250"
+					onclick="setCasa2()"
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"
+				></a-entity>
+				<a-entity
+					id="waypoint3"
+					scale="0 0 0"
+					color="#00AA00"
+					position="-4 0.5 -0.2"
+					class="clickable"
+					blink-teleportation="pos: -497.24998 0.12 -496.8244; hide: true; dur: 250"
+					onclick="setBosque()"	
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"
+				></a-entity>
+			</a-entity>
+			<!-- Bosque -->
+			<a-entity id="Bosque" visible="false">
+				<a-entity gltf-model="#escena3" position="-500 0 -500" rotation="" scale="1.5 1.5 1.5" ></a-entity>
+				<a-entity id="Botoon3" visible="true">
+					<a-plane id="Texto4" src="#Texto4" material="transparent: true" position="-497.85 2 -497.85" rotation="0 35 0" scale="1 1 1" geometry=""></a-plane>
+					<a-plane id="button" position="-497.55 1.55 -497.85" class="clickable" data-interactive="true" onclick="boton2()" rotation="0 35 0" scale="0.15 0.15 0.01" src="#play" material="transparent: true" geometry=""></a-plane>
+				</a-entity> 
+				<a-entity id="Botoon4" visible="false">
+					<a-plane id="Texto5" src="#Texto5" material="transparent: true" position="-496.85 2 -497.85" rotation="0 -35 0" scale="1 1 1" geometry=""></a-plane>
+					<a-plane id="button" position="-496.6 1.55 -497.65" class="clickable" data-interactive="true" onclick="boton3()" rotation="0 -35 0" scale="0.15 0.15 0.01" src="#play" material="transparent: true" geometry=""></a-plane>
+				</a-entity> 
+				<a-entity id="Botoon5" visible="false">
+					<a-plane id="Texto6" src="#Texto6" material="transparent: true" position="-498.5 2 -511" rotation="0 35 0" scale="1 1 1" geometry=""></a-plane>
+					
+				</a-entity> 
+				<a-entity id="Familia2" rotation="0 180 0" >
+					<a-entity gltf-model="#madra" shadow="receive: false" position="495.22531 0.12 500.78739" rotation="0 90 0" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#hansel" shadow="receive: false" position="499.48726 0.12 500.73818" rotation="0 -90 0" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#gretel" shadow="receive: false" position="499.29095 0.12 501.58486" rotation="0 -90 0" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#padre" shadow="receive: false" position="495.57547 0.12 502.07547" rotation="0 90 0" animation-mixer="clip: Neutral"></a-entity>
+					<a-entity
+					id="waypoint4"
+					scale="0 0 0"
+					color="#00AA00"
+					position="498.223 0.5 505.797"
+					class="clickable"
+					blink-teleportation="pos: -497.24998 0.12 -510; hide: true; dur: 250"
+					onclick="setBosque2()"	
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"
+				></a-entity>
+				</a-entity>
+				<a-entity id="Familia3" rotation="0 180 0" visible="false" >
+					
+					<a-entity gltf-model="#hansel" shadow="receive: false" position="497.50055 0.12 515" rotation="" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#gretel" shadow="receive: false" position="498.63519 0.12 515" rotation="" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#buho" position="498.63519 2 520" rotation="0 180 0" animation-mixer=""></a-entity>
+				</a-entity>
+				<a-entity
+					id="waypoint5"
+					scale="0 0 0"
+					color="#00AA00"
+					position="-498.63519 1 -520"
+					class="clickable"
+					blink-teleportation="pos: 1.483 -1 -8.047; hide: true; dur: 250"
+					onclick="setExteriorBruja()"
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"	
+				></a-entity>
+			</a-entity>
+			<!-- Exterior Bruja -->
+			<a-entity id="ExteriorBruja" visible="false">
+				<a-entity gltf-model="#escena4" position="-3 2 -20" rotation="0 0 0" scale="1.5 1.5 1.5" ></a-entity>
+				<a-entity id="Botoon6" visible="true">
+					<a-plane id="Texto7" src="#Texto7" material="transparent: true" position="3 0.5 -8.98" rotation="0 -45 0" scale="1.8 1.8 1.8" geometry=""></a-plane>
+					
+				</a-entity> 
+				<a-entity id="Familia5" rotation="0 -90 0" position="-2.732 -1 -10.468" >
+				<a-entity gltf-model="#bruja" shadow="receive: false" position="-3.41183 0.12036 -4.416" rotation="0 90 0" animation-mixer="clip: Idle"></a-entity>
+				<a-entity gltf-model="#gretel" shadow="receive: false" position="-1.660 0.109 -3.696" rotation="0 -90 0" animation-mixer="clip: Idle"></a-entity>
+				<a-entity gltf-model="#hansel" shadow="receive: false" position="-1.660 0.109 -5" rotation="0 -90 0" animation-mixer="clip: Idle"></a-entity>	
+			</a-entity>
+			</a-entity>
+			<a-entity
+					id="waypoint6"
+					scale="0 0 0"
+					color="#00AA00"
+					position="0 0 -10"
+					class="clickable"
+					blink-teleportation="pos: 3 -2 0; hide: true; dur: 250"
+					onclick="setInteriorBruja()"
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"	
+				></a-entity>
+			<!-- Interior Bruja -->
+			<a-entity id="InteriorBruja" visible="false">
+					<a-entity gltf-model="#escena5" position="0 0 0" rotation="0 0 0" scale="1 1 1" ></a-entity>
+					<a-entity id="Botoon7" visible="true">
+						<a-plane id="Texto8" src="#Texto8" material="transparent: true" position="3.1 -0.5 -1.0" rotation="0 0 0" scale="1 1 1" geometry=""></a-plane>
+						<a-plane id="button" position="3.4 -0.93 -0.99" class="clickable" data-interactive="true" onclick="boton4()" rotation="0 0 0" scale="0.15 0.15 0.01" src="#play" material="transparent: true" geometry=""></a-plane>
+						
+					</a-entity> 
+                    <a-entity id="Botoon8" visible="false">
+						<a-plane id="Texto9" src="#Texto9" material="transparent: true" position="2.1 -0.5 -0.81882" rotation="0 45 0" scale="1.2 1.2 1.2" geometry=""></a-plane>
+						<a-plane id="button" position="2.5 -0.88 -0.81882" class="clickable" data-interactive="true" onclick="boton5()" rotation="0 45 0" scale="0.15 0.15 0.01" src="#play" material="transparent: true" geometry=""></a-plane>
+						
+					</a-entity> 
+					<a-entity id="Botoon9" visible="false">
+						<a-plane id="Texto10" src="#Texto10" material="transparent: true" position="3.1 -0.5 -1.0" rotation="0 0 0" scale="1 1 1" geometry=""></a-plane>
+						<a-plane id="button2" position="3.4 -0.93 -0.99" class="clickable" data-interactive="true" onclick="boton6()" rotation="0 0 0" scale="0.15 0.15 0.01" src="#play" material="transparent: true" geometry=""></a-plane>
+						
+					</a-entity> 
+					<a-entity id="Familia6" rotation="0 180 0" position="1.203 -1.945 -9.238" visible="true">
+					<a-entity gltf-model="#bruja" shadow="receive: false" position="-3.41183 0.12036 -3.76111" rotation="0 90 0" animation-mixer="clip: Discution"></a-entity>
+					<a-entity gltf-model="#gretel" shadow="receive: false" position="-1.660 0.109 -3.696" rotation="0 -90 0" animation-mixer="clip: Fear"></a-entity>
+					<a-entity gltf-model="#hansel" shadow="receive: false" position="0.49493 1.08047 -7.61882" rotation="0 -90 0" animation-mixer="clip: Spy"></a-entity>			
+				</a-entity>
+			</a-entity>
+			<a-entity
+					id="waypoint7"
+					scale="0 0 0"
+					color="#00AA00"
+					position="1.388 -0.755 -3.761"
+					class="clickable"
+					blink-teleportation="pos: 3 -2 0; hide: true; dur: 250"
+					onclick="setInteriorBruja2()"
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"	
+				></a-entity>
+			
+					<a-entity id="Familia7" rotation="0 180 0" position="-0.716 -1.896 -8.053" visible="false">
+					<a-entity gltf-model="#gretel" shadow="receive: false" position="-1.660 0.109 -3.696" rotation="0 180 0" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#hansel" shadow="receive: false" position="-1.035 0.109 -5.158" rotation="0 -20 0" animation-mixer="clip: Idle"></a-entity>			
+				</a-entity>
+				<a-entity
+					id="waypoint8"
+					scale="0 0 0"
+					color="#00AA00"
+					position="4 -0.755 -3.761"
+					class="clickable"
+					blink-teleportation="pos: 0 0 12; hide: true; dur: 250"
+					onclick="setLago()"	
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"
+				></a-entity>
+			<!-- Lago -->
+			<a-entity id="Lago" visible="false">
+				<a-entity id="Botoon10" visible="true">
+					<a-plane id="Texto11" src="#Texto11" material="transparent: true" position="-2 1.5 11" rotation="0 50 0" scale="2 2 2" geometry=""></a-plane>
+				</a-entity> 
+				<a-entity gltf-model="#escena6" position="0 0 7" rotation="0 0 0" scale="1 1 1" ></a-entity>
+				<a-entity gltf-model="#cisne" position="0 0 0" rotation="0 0 0" scale="1 1 1" animation-mixer=""></a-entity>
+				<a-entity gltf-model="#gretel" shadow="receive: false" position="1 0.109 10" rotation="0 -160 0" animation-mixer="clip: Idle"></a-entity>
+				<a-entity gltf-model="#hansel" shadow="receive: false" position="-1 0.109 10" rotation="0 -190 0" animation-mixer="clip: Idle"></a-entity>
+				<a-entity gltf-model="#cofre" shadow="receive: false" position="0.059 0.109 10.209" rotation="0 90 0" animation-mixer="clip: IdleClose"></a-entity>
+
+			</a-entity>
+
+			<a-entity
+					id="waypoint9"
+					scale="0 0 0"
+					color="#00AA00"
+					position="0.059 0.587 4.972"
+					class="clickable"
+					blink-teleportation="pos: 0 0 9; hide: true; dur: 250"
+					onclick="setFinal()"	
+					gltf-model="#waypointC"
+					animation-mixer="clip: Rotation"
+				></a-entity>
+
+				<a-entity id="Familia8" rotation="0 0 0" visible="false" >
+					<a-entity id="Botoon11" visible="true">
+						<a-plane id="Texto12" src="#Texto12" material="transparent: true" position="1.8 1.5 7.8" rotation="0 -50 0" scale="2 2 2" geometry=""></a-plane>
+					</a-entity> 
+					<a-entity gltf-model="#hansel" shadow="receive: false" position="-1.52407 0.14 3.8169" rotation="0 60 0" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#gretel" shadow="receive: false" position="-1.5987 0.14 5.35699" rotation="0 100 0" animation-mixer="clip: Idle"></a-entity>
+					<a-entity gltf-model="#padre" shadow="receive: false" position="1.93959 0.12 4.15723" rotation="0 -60 0" animation-mixer="clip: Neutral"></a-entity>
+					<a-entity gltf-model="#cisne" shadow="receive: false" position="-11.119 0 -0.88416" rotation="0 60 0" animation-mixer=""></a-entity>
+					<a-entity gltf-model="#cofre" shadow="receive: false" position="0 0.12 4.15117" rotation="0 -90 0" animation-mixer="clip: IdleOpen"></a-entity>
+				</a-entity>
+			<!-- Casa -->
+<!-- 
+
+
+
+			
+			 <a-entity
+			 position="-4.37718 0 -3.6874"
+			 particle-system="preset: default; texture: ./images/Humito.png;  maxParticleCount: 500"
+			 ></a-entity>
+
+			-->
+
+
+
+			<!-- GREEN BOX | BLINK-TELEPORTATION ELEMENT | WILL BE HIDDEN AFTER CLICK -->
+			
+			
+			
+
+			<!-- CAMERA RIG -->
+			<a-entity id="camRig" position="0 0 12" >
+				
+				<!-- CAMERA -->
+				<a-camera id="cam" wasd-controls-enabled="false">
+					
+
+				</a-camera>
+			</a-entity>
+	
+			
+		</a-scene>
+	</body>
+</html>
+
+<!-- Write your comments here 
+
+<script>
+			AFRAME.registerComponent("foo", {
+				init: function () {
+					this.el.addEventListener("hitstart", (e) => {
+						console.log(e);
+					});
+					this.el.addEventListener("hitend", (e) => {
+						console.log(e);
+					});
+				},
+			});
+</script>
+			<a-camera aabb-collider="objects: .box" foo>
+				<a-sphere></a-sphere>
+			</a-camera>
+
+	<a-box class="box" color="blue" position="0 1.5 -3"></a-box>
+			<a-entity id="camera" position="0 1.6 0">
+
+				<a-entity
+					id="camera"
+					camera
+					look-controls
+					wasd-controls
+					kinematic-body
+					foo
+				></a-entity>
+			</a-entity>
+
+
+-Best way to make multiple big scenes in WebVr (like the ones we had in oculus). PWA https://www.e-gineering.com/wp-content/uploads/2017/04/pwa_diagram2.png
+
+-How to save and send data from answering questions in game. JSON.parse( localStorage.getItem('answer-question') ); localStorage.setItem('answer-question', JSON.stringify(previousMeasures)); fetch() https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API fetch('https://server-score.utopic.com/api/save/', { playerId:1234,game:'HanselGretel', ["scene1":[ question1:0, question2:1, question3:1, ]] } server : server-score.utopic.com > save to database send confirmation {playedId:1234, save:1}
+
+-What kind of animations we can use. rigging/skinning animations with timeframe e.g. https://gist.github.com/Utopiah/0a4abc49c73e8512fac6be7a625057b6
+
+-Is there any type of custom shaders? yes https://aframe.io/docs/1.0.0/components/material.html#example-glsl-and-shaders https://twitter.com/mark_lundin/status/1281260486517014530d
+
+asset store for WebXR https://www.npmjs.com/search?q=aframe https://www.npmjs.com/search?q=threejs https://www.npmjs.com/package/react-three-fiber also based on https://threejs.org/
+-->
+
