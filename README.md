@@ -13,13 +13,17 @@ To test Hansel & Gretel WebVR (Aframe) you will need:
 ## Setup
 
 1. Click Start in Apache on XAMPP
-![](imagestutorial/Xampp.png)
+
+![](imagestutorial/Xampp.PNG)
+
 2. Put the project folder in htdocs inside the XAMPP folder
-![](imagestutorial/carpeta.png)
+
+![](imagestutorial/carpeta.PNG)
 
 
 ## How to test in Firefox
 
-1. type in Firefox Search: localhost/(Name of folder)/  
-![](imagestutorial/firefox.png)
+1. type in Firefox Search: localhost/(Name of folder)/
+
+![](imagestutorial/firefox.PNG)
 
